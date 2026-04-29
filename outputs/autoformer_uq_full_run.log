@@ -1,0 +1,49 @@
+Loading data...
+Shape: (138941, 11)
+X:(135805, 60, 4)  y:(135805, 5)
+Train:108644  Test:27161
+Device: cpu
+Parameters: 467,854
+
+Training Autoformer + UQ for 25 epochs...
+Epoch [01/25]  GNLL Loss: -2.01996  LR: 2.99e-04
+Epoch [02/25]  GNLL Loss: -2.30476  LR: 2.95e-04
+Epoch [03/25]  GNLL Loss: -2.36578  LR: 2.89e-04
+Epoch [04/25]  GNLL Loss: -2.41856  LR: 2.81e-04
+Epoch [05/25]  GNLL Loss: -2.44084  LR: 2.71e-04
+Epoch [06/25]  GNLL Loss: -2.45930  LR: 2.59e-04
+Epoch [07/25]  GNLL Loss: -2.46765  LR: 2.46e-04
+Epoch [08/25]  GNLL Loss: -2.47803  LR: 2.30e-04
+Epoch [09/25]  GNLL Loss: -2.48401  LR: 2.14e-04
+Epoch [10/25]  GNLL Loss: -2.48641  LR: 1.96e-04
+Epoch [11/25]  GNLL Loss: -2.49073  LR: 1.78e-04
+Epoch [12/25]  GNLL Loss: -2.49388  LR: 1.59e-04
+Epoch [13/25]  GNLL Loss: -2.50458  LR: 1.41e-04
+Epoch [14/25]  GNLL Loss: -2.50582  LR: 1.22e-04
+Epoch [15/25]  GNLL Loss: -2.51066  LR: 1.04e-04
+Epoch [16/25]  GNLL Loss: -2.51212  LR: 8.61e-05
+Epoch [17/25]  GNLL Loss: -2.51555  LR: 6.96e-05
+Epoch [18/25]  GNLL Loss: -2.51988  LR: 5.44e-05
+Epoch [19/25]  GNLL Loss: -2.52460  LR: 4.07e-05
+Epoch [20/25]  GNLL Loss: -2.52607  LR: 2.86e-05
+Epoch [21/25]  GNLL Loss: -2.52865  LR: 1.86e-05
+Epoch [22/25]  GNLL Loss: -2.52914  LR: 1.05e-05
+Epoch [23/25]  GNLL Loss: -2.53223  LR: 4.71e-06
+Epoch [24/25]  GNLL Loss: -2.53288  LR: 1.18e-06
+Epoch [25/25]  GNLL Loss: -2.53232  LR: 0.00e+00
+
+Evaluating...
+
+Per-day evaluation (mean prediction):
+  Day+1 → MAE:0.04172  RMSE:0.06079  Avg-Uncertainty(±σ):0.07773
+  Day+2 → MAE:0.04163  RMSE:0.06084  Avg-Uncertainty(±σ):0.07805
+  Day+3 → MAE:0.04156  RMSE:0.06074  Avg-Uncertainty(±σ):0.07829
+  Day+4 → MAE:0.04146  RMSE:0.06078  Avg-Uncertainty(±σ):0.07897
+  Day+5 → MAE:0.04149  RMSE:0.06074  Avg-Uncertainty(±σ):0.07927
+
+Overall → MAE:0.04157  RMSE:0.06078
+
+Saved → models/autoformer_uq_model.pth
+Plots saved → outputs/autoformer_uq_loss.png
+           → outputs/autoformer_uq_bands.png
+           → outputs/autoformer_uq_per_day_uncertainty.png

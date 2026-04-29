@@ -1,0 +1,674 @@
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://10.0.0.181:8501
+  External URL: http://69.255.28.182:8501
+
+  For better performance, install the Watchdog module:
+
+  $ xcode-select --install
+  $ pip install watchdog
+            
+[31m──[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m──[0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mexec_code.py[0m:129 in             [31m [0m
+[31m [0m exec_func_with_error_handling                                                [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mscript_runner.py[0m:689 in         [31m [0m
+[31m [0m code_to_exec                                                                 [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/[0m[1mapp.py[0m:73 in <module> [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m 70 [0m[2m│   │   [0mX_input = torch.tensor(scaled_data, dtype=torch.float32).unsqu [31m [0m
+[31m [0m   [2m 71 [0m[2m│   │   [0m                                                               [31m [0m
+[31m [0m   [2m 72 [0m[2m│   │   [0m[2m# Run inference[0m                                                [31m [0m
+[31m [0m [31m❱ [0m 73 [2m│   │   [0mmodel = [1;4mload_model()[0m                                           [31m [0m
+[31m [0m   [2m 74 [0m[2m│   │   [0m[94mwith[0m torch.no_grad():                                          [31m [0m
+[31m [0m   [2m 75 [0m[2m│   │   │   [0mmean_pred, log_var_pred = model(X_input)                   [31m [0m
+[31m [0m   [2m 76 [0m[2m│   │   │   [0mmu = mean_pred[[94m0[0m].cpu().numpy()  [2m# (5,)[0m                    [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/caching/[0m[1mcache_utils.py[0m:281 in __call__       [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/caching/[0m[1mcache_utils.py[0m:326 in                [31m [0m
+[31m [0m _get_or_create_cached_value                                                  [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/caching/[0m[1mcache_utils.py[0m:385 in                [31m [0m
+[31m [0m _handle_cache_miss                                                           [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/[0m[1mapp.py[0m:21 in          [31m [0m
+[31m [0m load_model                                                                   [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m 18 [0m[1;95m@st[0m.cache_resource                                                     [31m [0m
+[31m [0m   [2m 19 [0m[94mdef[0m[90m [0m[92mload_model[0m():                                                      [31m [0m
+[31m [0m   [2m 20 [0m[2m│   [0mmodel = StockAutoformer().to(device)                               [31m [0m
+[31m [0m [31m❱ [0m 21 [2m│   [0m[1;4mmodel.load_state_dict(torch.load(MODEL_PATH, map_location=device))[0m [31m [0m
+[31m [0m   [2m 22 [0m[2m│   [0mmodel.eval()                                                       [31m [0m
+[31m [0m   [2m 23 [0m[2m│   [0m[94mreturn[0m model                                                       [31m [0m
+[31m [0m   [2m 24 [0m                                                                       [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/torch/nn/modules/[0m[1mmodule.py[0m:2639 in load_state_dict             [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m2636 [0m[2m│   │   │   │   [0m)                                                     [31m [0m
+[31m [0m   [2m2637 [0m[2m│   │   [0m                                                              [31m [0m
+[31m [0m   [2m2638 [0m[2m│   │   [0m[94mif[0m [96mlen[0m(error_msgs) > [94m0[0m:                                       [31m [0m
+[31m [0m [31m❱ [0m2639 [2m│   │   │   [0m[1;4;94mraise[0m[1;4m [0m[1;4;96mRuntimeError[0m[1;4m([0m                                       [31m [0m
+[31m [0m   [2m2640 [0m[2m│   │   │   │   [0m[1;4;33m"[0m[1;4;33mError(s) in loading state_dict for [0m[1;4;33m{}[0m[1;4;33m:[0m[1;4;33m\n[0m[1;4;33m\t[0m[1;4;33m{}[0m[1;4;33m"[0m[1;4m.format[0m [31m [0m
+[31m [0m   [2m2641 [0m[2m│   │   │   │   │   [0m[1;4;96mself[0m[1;4m.[0m[1;4;91m__class__[0m[1;4m.[0m[1;4;91m__name__[0m[1;4m, [0m[1;4;33m"[0m[1;4;33m\n[0m[1;4;33m\t[0m[1;4;33m"[0m[1;4m.join(error_msgs)[0m  [31m [0m
+[31m [0m   [2m2642 [0m[2m│   │   │   │   [0m[1;4m)[0m                                                     [31m [0m
+[31m────────────────────────────────────────────────────────────────────────────────[0m
+[1;91mRuntimeError: [0m[1;35mError[0m[1m([0ms[1m)[0m in loading state_dict for StockAutoformer:
+        Missing [1;35mkey[0m[1m([0ms[1m)[0m in state_dict: [32m"enc_embed.weight"[0m, [32m"enc_embed.bias"[0m, 
+[32m"dec_embed.weight"[0m, [32m"dec_embed.bias"[0m, [32m"encoder.0.attn.q.weight"[0m, 
+[32m"encoder.0.attn.q.bias"[0m, [32m"encoder.0.attn.k.weight"[0m, [32m"encoder.0.attn.k.bias"[0m, 
+[32m"encoder.0.attn.v.weight"[0m, [32m"encoder.0.attn.v.bias"[0m, [32m"encoder.0.attn.out.weight"[0m,
+[32m"encoder.0.attn.out.bias"[0m, [32m"encoder.0.ff.0.weight"[0m, [32m"encoder.0.ff.0.bias"[0m, 
+[32m"encoder.0.ff.3.weight"[0m, [32m"encoder.0.ff.3.bias"[0m, [32m"encoder.0.norm1.weight"[0m, 
+[32m"encoder.0.norm1.bias"[0m, [32m"encoder.0.norm2.weight"[0m, [32m"encoder.0.norm2.bias"[0m, 
+[32m"encoder.1.attn.q.weight"[0m, [32m"encoder.1.attn.q.bias"[0m, [32m"encoder.1.attn.k.weight"[0m, 
+[32m"encoder.1.attn.k.bias"[0m, [32m"encoder.1.attn.v.weight"[0m, [32m"encoder.1.attn.v.bias"[0m, 
+[32m"encoder.1.attn.out.weight"[0m, [32m"encoder.1.attn.out.bias"[0m, [32m"encoder.1.ff.0.weight"[0m,
+[32m"encoder.1.ff.0.bias"[0m, [32m"encoder.1.ff.3.weight"[0m, [32m"encoder.1.ff.3.bias"[0m, 
+[32m"encoder.1.norm1.weight"[0m, [32m"encoder.1.norm1.bias"[0m, [32m"encoder.1.norm2.weight"[0m, 
+[32m"encoder.1.norm2.bias"[0m, [32m"enc_norm.weight"[0m, [32m"enc_norm.bias"[0m, 
+[32m"decoder.0.self_attn.q.weight"[0m, [32m"decoder.0.self_attn.q.bias"[0m, 
+[32m"decoder.0.self_attn.k.weight"[0m, [32m"decoder.0.self_attn.k.bias"[0m, 
+[32m"decoder.0.self_attn.v.weight"[0m, [32m"decoder.0.self_attn.v.bias"[0m, 
+[32m"decoder.0.self_attn.out.weight"[0m, [32m"decoder.0.self_attn.out.bias"[0m, 
+[32m"decoder.0.cross_attn.q.weight"[0m, [32m"decoder.0.cross_attn.q.bias"[0m, 
+[32m"decoder.0.cross_attn.k.weight"[0m, [32m"decoder.0.cross_attn.k.bias"[0m, 
+[32m"decoder.0.cross_attn.v.weight"[0m, [32m"decoder.0.cross_attn.v.bias"[0m, 
+[32m"decoder.0.cross_attn.out.weight"[0m, [32m"decoder.0.cross_attn.out.bias"[0m, 
+[32m"decoder.0.ff.0.weight"[0m, [32m"decoder.0.ff.0.bias"[0m, [32m"decoder.0.ff.3.weight"[0m, 
+[32m"decoder.0.ff.3.bias"[0m, [32m"decoder.0.norm1.weight"[0m, [32m"decoder.0.norm1.bias"[0m, 
+[32m"decoder.0.norm2.weight"[0m, [32m"decoder.0.norm2.bias"[0m, [32m"decoder.0.norm3.weight"[0m, 
+[32m"decoder.0.norm3.bias"[0m, [32m"decoder.0.trend_proj.weight"[0m, [32m"dec_norm.weight"[0m, 
+[32m"dec_norm.bias"[0m, [32m"seasonal_proj.weight"[0m, [32m"seasonal_proj.bias"[0m, 
+[32m"mean_head.weight"[0m, [32m"mean_head.bias"[0m, [32m"log_var_head.weight"[0m, 
+[32m"log_var_head.bias"[0m. 
+        Unexpected [1;35mkey[0m[1m([0ms[1m)[0m in state_dict: [32m"ee.weight"[0m, [32m"ee.bias"[0m, [32m"de.weight"[0m, 
+[32m"de.bias"[0m, [32m"enc.0.a.q.weight"[0m, [32m"enc.0.a.q.bias"[0m, [32m"enc.0.a.k.weight"[0m, 
+[32m"enc.0.a.k.bias"[0m, [32m"enc.0.a.v.weight"[0m, [32m"enc.0.a.v.bias"[0m, [32m"enc.0.a.o.weight"[0m, 
+[32m"enc.0.a.o.bias"[0m, [32m"enc.0.ff.0.weight"[0m, [32m"enc.0.ff.0.bias"[0m, [32m"enc.0.ff.3.weight"[0m, 
+[32m"enc.0.ff.3.bias"[0m, [32m"enc.0.n1.weight"[0m, [32m"enc.0.n1.bias"[0m, [32m"enc.0.n2.weight"[0m, 
+[32m"enc.0.n2.bias"[0m, [32m"enc.1.a.q.weight"[0m, [32m"enc.1.a.q.bias"[0m, [32m"enc.1.a.k.weight"[0m, 
+[32m"enc.1.a.k.bias"[0m, [32m"enc.1.a.v.weight"[0m, [32m"enc.1.a.v.bias"[0m, [32m"enc.1.a.o.weight"[0m, 
+[32m"enc.1.a.o.bias"[0m, [32m"enc.1.ff.0.weight"[0m, [32m"enc.1.ff.0.bias"[0m, [32m"enc.1.ff.3.weight"[0m, 
+[32m"enc.1.ff.3.bias"[0m, [32m"enc.1.n1.weight"[0m, [32m"enc.1.n1.bias"[0m, [32m"enc.1.n2.weight"[0m, 
+[32m"enc.1.n2.bias"[0m, [32m"en.weight"[0m, [32m"en.bias"[0m, [32m"dec.0.sa.q.weight"[0m, [32m"dec.0.sa.q.bias"[0m,
+[32m"dec.0.sa.k.weight"[0m, [32m"dec.0.sa.k.bias"[0m, [32m"dec.0.sa.v.weight"[0m, [32m"dec.0.sa.v.bias"[0m, 
+[32m"dec.0.sa.o.weight"[0m, [32m"dec.0.sa.o.bias"[0m, [32m"dec.0.ca.q.weight"[0m, [32m"dec.0.ca.q.bias"[0m, 
+[32m"dec.0.ca.k.weight"[0m, [32m"dec.0.ca.k.bias"[0m, [32m"dec.0.ca.v.weight"[0m, [32m"dec.0.ca.v.bias"[0m, 
+[32m"dec.0.ca.o.weight"[0m, [32m"dec.0.ca.o.bias"[0m, [32m"dec.0.ff.0.weight"[0m, [32m"dec.0.ff.0.bias"[0m, 
+[32m"dec.0.ff.3.weight"[0m, [32m"dec.0.ff.3.bias"[0m, [32m"dec.0.n1.weight"[0m, [32m"dec.0.n1.bias"[0m, 
+[32m"dec.0.n2.weight"[0m, [32m"dec.0.n2.bias"[0m, [32m"dec.0.n3.weight"[0m, [32m"dec.0.n3.bias"[0m, 
+[32m"dec.0.tp.weight"[0m, [32m"dn.weight"[0m, [32m"dn.bias"[0m, [32m"mh.weight"[0m, [32m"mh.bias"[0m, [32m"lh.weight"[0m, 
+[32m"lh.bias"[0m. 
+[31m──[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m──[0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mexec_code.py[0m:129 in             [31m [0m
+[31m [0m exec_func_with_error_handling                                                [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mscript_runner.py[0m:689 in         [31m [0m
+[31m [0m code_to_exec                                                                 [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/[0m[1mapp.py[0m:8 in <module>  [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m  5 [0m                                                                       [31m [0m
+[31m [0m   [2m  6 [0m[2m# Add src to path so we can import the model[0m                           [31m [0m
+[31m [0m   [2m  7 [0msys.path.insert([94m0[0m, os.path.join(os.path.dirname([91m__file__[0m), [33m'[0m[33msrc[0m[33m'[0m))     [31m [0m
+[31m [0m [31m❱ [0m  8 [94mfrom[0m[90m [0m[4;96mautoformer_mod[0m[1;4;96mel[0m[90m [0m[94mimport[0m StockAutoformer                           [31m [0m
+[31m [0m   [2m  9 [0m                                                                       [31m [0m
+[31m [0m   [2m 10 [0mst.set_page_config(page_title=[33m"[0m[33mAutoformer Stock Predictor[0m[33m"[0m, page_icon= [31m [0m
+[31m [0m   [2m 11 [0m                                                                       [31m [0m
+[31m────────────────────────────────────────────────────────────────────────────────[0m
+[1;91mNameError: [0mname [32m'nn'[0m is not defined
+[31m──[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m──[0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mexec_code.py[0m:129 in             [31m [0m
+[31m [0m exec_func_with_error_handling                                                [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mscript_runner.py[0m:689 in         [31m [0m
+[31m [0m code_to_exec                                                                 [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/[0m[1mapp.py[0m:8 in <module>  [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m  5 [0m                                                                       [31m [0m
+[31m [0m   [2m  6 [0m[94mimport[0m[90m [0m[4;96mmath[0m,[90m [0m[4;96mtorch[0m[4;96m.[0m[4;96mnn[0m[4;96m.[0m[4;96mfunctional[0m[90m [0m[94mas[0m[90m [0m[4;96mF[0m                                  [31m [0m
+[31m [0m   [2m  7 [0m                                                                       [31m [0m
+[31m [0m [31m❱ [0m  8 [94mclass[0m[90m [0m[4;92mSeriesDecomp[0m([1;4mnn[0m.Module):                                         [31m [0m
+[31m [0m   [2m  9 [0m[2m│   [0m[94mdef[0m[90m [0m[92m__init__[0m([96mself[0m,k=[94m25[0m):                                           [31m [0m
+[31m [0m   [2m 10 [0m[2m│   │   [0m[96msuper[0m().[92m__init__[0m(); [96mself[0m.pad=nn.ReplicationPad1d((k-[94m1[0m)//[94m2[0m); [96mse[0m [31m [0m
+[31m [0m   [2m 11 [0m[2m│   [0m[94mdef[0m[90m [0m[92mforward[0m([96mself[0m,x):                                               [31m [0m
+[31m────────────────────────────────────────────────────────────────────────────────[0m
+[1;91mNameError: [0mname [32m'nn'[0m is not defined
+[31m──[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m──[0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mexec_code.py[0m:129 in             [31m [0m
+[31m [0m exec_func_with_error_handling                                                [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mscript_runner.py[0m:689 in         [31m [0m
+[31m [0m code_to_exec                                                                 [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/[0m[1mapp.py[0m:8 in <module>  [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m  5 [0m                                                                       [31m [0m
+[31m [0m   [2m  6 [0m[94mimport[0m[90m [0m[4;96mmath[0m,[90m [0m[4;96mtorch[0m[4;96m.[0m[4;96mnn[0m[4;96m.[0m[4;96mfunctional[0m[90m [0m[94mas[0m[90m [0m[4;96mF[0m                                  [31m [0m
+[31m [0m   [2m  7 [0m                                                                       [31m [0m
+[31m [0m [31m❱ [0m  8 [94mclass[0m[90m [0m[4;92mSeriesDecomp[0m([1;4mnn[0m.Module):                                         [31m [0m
+[31m [0m   [2m  9 [0m[2m│   [0m[94mdef[0m[90m [0m[92m__init__[0m([96mself[0m,k=[94m25[0m):                                           [31m [0m
+[31m [0m   [2m 10 [0m[2m│   │   [0m[96msuper[0m().[92m__init__[0m(); [96mself[0m.pad=nn.ReplicationPad1d((k-[94m1[0m)//[94m2[0m); [96mse[0m [31m [0m
+[31m [0m   [2m 11 [0m[2m│   [0m[94mdef[0m[90m [0m[92mforward[0m([96mself[0m,x):                                               [31m [0m
+[31m────────────────────────────────────────────────────────────────────────────────[0m
+[1;91mNameError: [0mname [32m'nn'[0m is not defined
+[31m──[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m──[0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mexec_code.py[0m:129 in             [31m [0m
+[31m [0m exec_func_with_error_handling                                                [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mscript_runner.py[0m:689 in         [31m [0m
+[31m [0m code_to_exec                                                                 [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/[0m[1mapp.py[0m:8 in <module>  [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m  5 [0m                                                                       [31m [0m
+[31m [0m   [2m  6 [0m[94mimport[0m[90m [0m[4;96mmath[0m,[90m [0m[4;96mtorch[0m[4;96m.[0m[4;96mnn[0m[4;96m.[0m[4;96mfunctional[0m[90m [0m[94mas[0m[90m [0m[4;96mF[0m                                  [31m [0m
+[31m [0m   [2m  7 [0m                                                                       [31m [0m
+[31m [0m [31m❱ [0m  8 [94mclass[0m[90m [0m[4;92mSeriesDecomp[0m([1;4mnn[0m.Module):                                         [31m [0m
+[31m [0m   [2m  9 [0m[2m│   [0m[94mdef[0m[90m [0m[92m__init__[0m([96mself[0m,k=[94m25[0m):                                           [31m [0m
+[31m [0m   [2m 10 [0m[2m│   │   [0m[96msuper[0m().[92m__init__[0m(); [96mself[0m.pad=nn.ReplicationPad1d((k-[94m1[0m)//[94m2[0m); [96mse[0m [31m [0m
+[31m [0m   [2m 11 [0m[2m│   [0m[94mdef[0m[90m [0m[92mforward[0m([96mself[0m,x):                                               [31m [0m
+[31m────────────────────────────────────────────────────────────────────────────────[0m
+[1;91mNameError: [0mname [32m'nn'[0m is not defined
+[31m──[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m──[0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mexec_code.py[0m:129 in             [31m [0m
+[31m [0m exec_func_with_error_handling                                                [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mscript_runner.py[0m:689 in         [31m [0m
+[31m [0m code_to_exec                                                                 [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/[0m[1mapp.py[0m:8 in <module>  [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m  5 [0m                                                                       [31m [0m
+[31m [0m   [2m  6 [0m[94mimport[0m[90m [0m[4;96mmath[0m,[90m [0m[4;96mtorch[0m[4;96m.[0m[4;96mnn[0m[4;96m.[0m[4;96mfunctional[0m[90m [0m[94mas[0m[90m [0m[4;96mF[0m                                  [31m [0m
+[31m [0m   [2m  7 [0m                                                                       [31m [0m
+[31m [0m [31m❱ [0m  8 [94mclass[0m[90m [0m[4;92mSeriesDecomp[0m([1;4mnn[0m.Module):                                         [31m [0m
+[31m [0m   [2m  9 [0m[2m│   [0m[94mdef[0m[90m [0m[92m__init__[0m([96mself[0m,k=[94m25[0m):                                           [31m [0m
+[31m [0m   [2m 10 [0m[2m│   │   [0m[96msuper[0m().[92m__init__[0m(); [96mself[0m.pad=nn.ReplicationPad1d((k-[94m1[0m)//[94m2[0m); [96mse[0m [31m [0m
+[31m [0m   [2m 11 [0m[2m│   [0m[94mdef[0m[90m [0m[92mforward[0m([96mself[0m,x):                                               [31m [0m
+[31m────────────────────────────────────────────────────────────────────────────────[0m
+[1;91mNameError: [0mname [32m'nn'[0m is not defined
+2026-04-27 14:17:46.278 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-04-27 14:18:49.340 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-04-27 14:19:17.088 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-04-27 14:19:50.651 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+/Users/shruthirajgangapuri/deep_learning_stock_project/app.py:41: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.enc=nn.TransformerEncoder(enc,layers); self.fc=nn.Linear(d,out)
+[31m──[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m──[0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mexec_code.py[0m:129 in             [31m [0m
+[31m [0m exec_func_with_error_handling                                                [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mscript_runner.py[0m:689 in         [31m [0m
+[31m [0m code_to_exec                                                                 [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/[0m[1mapp.py[0m:186 in         [31m [0m
+[31m [0m <module>                                                                     [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m183 [0m[2m│   │   [0mX_input = torch.tensor(scaled_data, dtype=torch.float32).unsqu [31m [0m
+[31m [0m   [2m184 [0m[2m│   │   [0m                                                               [31m [0m
+[31m [0m   [2m185 [0m[2m│   │   [0m[2m# Run inference[0m                                                [31m [0m
+[31m [0m [31m❱ [0m186 [2m│   │   [0mlstm_model, trans_model, af_model = [1;4mload_models()[0m              [31m [0m
+[31m [0m   [2m187 [0m[2m│   │   [0m[94mwith[0m torch.no_grad():                                          [31m [0m
+[31m [0m   [2m188 [0m[2m│   │   │   [0mmu_lstm = lstm_model(X_input)[[94m0[0m].cpu().numpy()             [31m [0m
+[31m [0m   [2m189 [0m[2m│   │   │   [0mmu_trans = trans_model(X_input)[[94m0[0m].cpu().numpy()           [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/caching/[0m[1mcache_utils.py[0m:281 in __call__       [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/caching/[0m[1mcache_utils.py[0m:326 in                [31m [0m
+[31m [0m _get_or_create_cached_value                                                  [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/caching/[0m[1mcache_utils.py[0m:385 in                [31m [0m
+[31m [0m _handle_cache_miss                                                           [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/[0m[1mapp.py[0m:125 in         [31m [0m
+[31m [0m load_models                                                                  [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m122 [0m[2m│   [0m                                                                   [31m [0m
+[31m [0m   [2m123 [0m[2m│   [0m[2m# Transformer[0m                                                      [31m [0m
+[31m [0m   [2m124 [0m[2m│   [0mtrans_model = TransformerModel().to(device)                        [31m [0m
+[31m [0m [31m❱ [0m125 [2m│   [0m[94mif[0m os.path.exists(MODEL_PATH_TRANS): [1;4mtrans_model.load_state_dict(t[0m [31m [0m
+[31m [0m   [2m126 [0m[2m│   [0mtrans_model.eval()                                                 [31m [0m
+[31m [0m   [2m127 [0m[2m│   [0m                                                                   [31m [0m
+[31m [0m   [2m128 [0m[2m│   [0m[2m# Autoformer[0m                                                       [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/torch/nn/modules/[0m[1mmodule.py[0m:2639 in load_state_dict             [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m2636 [0m[2m│   │   │   │   [0m)                                                     [31m [0m
+[31m [0m   [2m2637 [0m[2m│   │   [0m                                                              [31m [0m
+[31m [0m   [2m2638 [0m[2m│   │   [0m[94mif[0m [96mlen[0m(error_msgs) > [94m0[0m:                                       [31m [0m
+[31m [0m [31m❱ [0m2639 [2m│   │   │   [0m[1;4;94mraise[0m[1;4m [0m[1;4;96mRuntimeError[0m[1;4m([0m                                       [31m [0m
+[31m [0m   [2m2640 [0m[2m│   │   │   │   [0m[1;4;33m"[0m[1;4;33mError(s) in loading state_dict for [0m[1;4;33m{}[0m[1;4;33m:[0m[1;4;33m\n[0m[1;4;33m\t[0m[1;4;33m{}[0m[1;4;33m"[0m[1;4m.format[0m [31m [0m
+[31m [0m   [2m2641 [0m[2m│   │   │   │   │   [0m[1;4;96mself[0m[1;4m.[0m[1;4;91m__class__[0m[1;4m.[0m[1;4;91m__name__[0m[1;4m, [0m[1;4;33m"[0m[1;4;33m\n[0m[1;4;33m\t[0m[1;4;33m"[0m[1;4m.join(error_msgs)[0m  [31m [0m
+[31m [0m   [2m2642 [0m[2m│   │   │   │   [0m[1;4m)[0m                                                     [31m [0m
+[31m────────────────────────────────────────────────────────────────────────────────[0m
+[1;91mRuntimeError: [0m[1;35mError[0m[1m([0ms[1m)[0m in loading state_dict for TransformerModel:
+        Missing [1;35mkey[0m[1m([0ms[1m)[0m in state_dict: [32m"proj.weight"[0m, [32m"proj.bias"[0m, [32m"pe.pe"[0m, 
+[32m"enc.layers.0.self_attn.in_proj_weight"[0m, [32m"enc.layers.0.self_attn.in_proj_bias"[0m, 
+[32m"enc.layers.0.self_attn.out_proj.weight"[0m, 
+[32m"enc.layers.0.self_attn.out_proj.bias"[0m, [32m"enc.layers.0.linear1.weight"[0m, 
+[32m"enc.layers.0.linear1.bias"[0m, [32m"enc.layers.0.linear2.weight"[0m, 
+[32m"enc.layers.0.linear2.bias"[0m, [32m"enc.layers.0.norm1.weight"[0m, 
+[32m"enc.layers.0.norm1.bias"[0m, [32m"enc.layers.0.norm2.weight"[0m, 
+[32m"enc.layers.0.norm2.bias"[0m, [32m"enc.layers.1.self_attn.in_proj_weight"[0m, 
+[32m"enc.layers.1.self_attn.in_proj_bias"[0m, [32m"enc.layers.1.self_attn.out_proj.weight"[0m,
+[32m"enc.layers.1.self_attn.out_proj.bias"[0m, [32m"enc.layers.1.linear1.weight"[0m, 
+[32m"enc.layers.1.linear1.bias"[0m, [32m"enc.layers.1.linear2.weight"[0m, 
+[32m"enc.layers.1.linear2.bias"[0m, [32m"enc.layers.1.norm1.weight"[0m, 
+[32m"enc.layers.1.norm1.bias"[0m, [32m"enc.layers.1.norm2.weight"[0m, 
+[32m"enc.layers.1.norm2.bias"[0m, [32m"enc.layers.2.self_attn.in_proj_weight"[0m, 
+[32m"enc.layers.2.self_attn.in_proj_bias"[0m, [32m"enc.layers.2.self_attn.out_proj.weight"[0m,
+[32m"enc.layers.2.self_attn.out_proj.bias"[0m, [32m"enc.layers.2.linear1.weight"[0m, 
+[32m"enc.layers.2.linear1.bias"[0m, [32m"enc.layers.2.linear2.weight"[0m, 
+[32m"enc.layers.2.linear2.bias"[0m, [32m"enc.layers.2.norm1.weight"[0m, 
+[32m"enc.layers.2.norm1.bias"[0m, [32m"enc.layers.2.norm2.weight"[0m, 
+[32m"enc.layers.2.norm2.bias"[0m. 
+        Unexpected [1;35mkey[0m[1m([0ms[1m)[0m in state_dict: [32m"input_proj.weight"[0m, [32m"input_proj.bias"[0m,
+[32m"pos_encoding.pe"[0m, [32m"encoder.layers.0.self_attn.in_proj_weight"[0m, 
+[32m"encoder.layers.0.self_attn.in_proj_bias"[0m, 
+[32m"encoder.layers.0.self_attn.out_proj.weight"[0m, 
+[32m"encoder.layers.0.self_attn.out_proj.bias"[0m, [32m"encoder.layers.0.linear1.weight"[0m, 
+[32m"encoder.layers.0.linear1.bias"[0m, [32m"encoder.layers.0.linear2.weight"[0m, 
+[32m"encoder.layers.0.linear2.bias"[0m, [32m"encoder.layers.0.norm1.weight"[0m, 
+[32m"encoder.layers.0.norm1.bias"[0m, [32m"encoder.layers.0.norm2.weight"[0m, 
+[32m"encoder.layers.0.norm2.bias"[0m, [32m"encoder.layers.1.self_attn.in_proj_weight"[0m, 
+[32m"encoder.layers.1.self_attn.in_proj_bias"[0m, 
+[32m"encoder.layers.1.self_attn.out_proj.weight"[0m, 
+[32m"encoder.layers.1.self_attn.out_proj.bias"[0m, [32m"encoder.layers.1.linear1.weight"[0m, 
+[32m"encoder.layers.1.linear1.bias"[0m, [32m"encoder.layers.1.linear2.weight"[0m, 
+[32m"encoder.layers.1.linear2.bias"[0m, [32m"encoder.layers.1.norm1.weight"[0m, 
+[32m"encoder.layers.1.norm1.bias"[0m, [32m"encoder.layers.1.norm2.weight"[0m, 
+[32m"encoder.layers.1.norm2.bias"[0m, [32m"encoder.layers.2.self_attn.in_proj_weight"[0m, 
+[32m"encoder.layers.2.self_attn.in_proj_bias"[0m, 
+[32m"encoder.layers.2.self_attn.out_proj.weight"[0m, 
+[32m"encoder.layers.2.self_attn.out_proj.bias"[0m, [32m"encoder.layers.2.linear1.weight"[0m, 
+[32m"encoder.layers.2.linear1.bias"[0m, [32m"encoder.layers.2.linear2.weight"[0m, 
+[32m"encoder.layers.2.linear2.bias"[0m, [32m"encoder.layers.2.norm1.weight"[0m, 
+[32m"encoder.layers.2.norm1.bias"[0m, [32m"encoder.layers.2.norm2.weight"[0m, 
+[32m"encoder.layers.2.norm2.bias"[0m. 
+/Users/shruthirajgangapuri/deep_learning_stock_project/app.py:41: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.enc=nn.TransformerEncoder(enc,layers); self.fc=nn.Linear(d,out)
+[31m──[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m──[0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mexec_code.py[0m:129 in             [31m [0m
+[31m [0m exec_func_with_error_handling                                                [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mscript_runner.py[0m:689 in         [31m [0m
+[31m [0m code_to_exec                                                                 [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/[0m[1mapp.py[0m:186 in         [31m [0m
+[31m [0m <module>                                                                     [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m183 [0m[2m│   │   [0mX_input = torch.tensor(scaled_data, dtype=torch.float32).unsqu [31m [0m
+[31m [0m   [2m184 [0m[2m│   │   [0m                                                               [31m [0m
+[31m [0m   [2m185 [0m[2m│   │   [0m[2m# Run inference[0m                                                [31m [0m
+[31m [0m [31m❱ [0m186 [2m│   │   [0mlstm_model, trans_model, af_model = [1;4mload_models()[0m              [31m [0m
+[31m [0m   [2m187 [0m[2m│   │   [0m[94mwith[0m torch.no_grad():                                          [31m [0m
+[31m [0m   [2m188 [0m[2m│   │   │   [0mmu_lstm = lstm_model(X_input)[[94m0[0m].cpu().numpy()             [31m [0m
+[31m [0m   [2m189 [0m[2m│   │   │   [0mmu_trans = trans_model(X_input)[[94m0[0m].cpu().numpy()           [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/caching/[0m[1mcache_utils.py[0m:281 in __call__       [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/caching/[0m[1mcache_utils.py[0m:326 in                [31m [0m
+[31m [0m _get_or_create_cached_value                                                  [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/caching/[0m[1mcache_utils.py[0m:385 in                [31m [0m
+[31m [0m _handle_cache_miss                                                           [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/[0m[1mapp.py[0m:125 in         [31m [0m
+[31m [0m load_models                                                                  [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m122 [0m[2m│   [0m                                                                   [31m [0m
+[31m [0m   [2m123 [0m[2m│   [0m[2m# Transformer[0m                                                      [31m [0m
+[31m [0m   [2m124 [0m[2m│   [0mtrans_model = TransformerModel().to(device)                        [31m [0m
+[31m [0m [31m❱ [0m125 [2m│   [0m[94mif[0m os.path.exists(MODEL_PATH_TRANS): [1;4mtrans_model.load_state_dict(t[0m [31m [0m
+[31m [0m   [2m126 [0m[2m│   [0mtrans_model.eval()                                                 [31m [0m
+[31m [0m   [2m127 [0m[2m│   [0m                                                                   [31m [0m
+[31m [0m   [2m128 [0m[2m│   [0m[2m# Autoformer[0m                                                       [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/torch/nn/modules/[0m[1mmodule.py[0m:2639 in load_state_dict             [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m2636 [0m[2m│   │   │   │   [0m)                                                     [31m [0m
+[31m [0m   [2m2637 [0m[2m│   │   [0m                                                              [31m [0m
+[31m [0m   [2m2638 [0m[2m│   │   [0m[94mif[0m [96mlen[0m(error_msgs) > [94m0[0m:                                       [31m [0m
+[31m [0m [31m❱ [0m2639 [2m│   │   │   [0m[1;4;94mraise[0m[1;4m [0m[1;4;96mRuntimeError[0m[1;4m([0m                                       [31m [0m
+[31m [0m   [2m2640 [0m[2m│   │   │   │   [0m[1;4;33m"[0m[1;4;33mError(s) in loading state_dict for [0m[1;4;33m{}[0m[1;4;33m:[0m[1;4;33m\n[0m[1;4;33m\t[0m[1;4;33m{}[0m[1;4;33m"[0m[1;4m.format[0m [31m [0m
+[31m [0m   [2m2641 [0m[2m│   │   │   │   │   [0m[1;4;96mself[0m[1;4m.[0m[1;4;91m__class__[0m[1;4m.[0m[1;4;91m__name__[0m[1;4m, [0m[1;4;33m"[0m[1;4;33m\n[0m[1;4;33m\t[0m[1;4;33m"[0m[1;4m.join(error_msgs)[0m  [31m [0m
+[31m [0m   [2m2642 [0m[2m│   │   │   │   [0m[1;4m)[0m                                                     [31m [0m
+[31m────────────────────────────────────────────────────────────────────────────────[0m
+[1;91mRuntimeError: [0m[1;35mError[0m[1m([0ms[1m)[0m in loading state_dict for TransformerModel:
+        Missing [1;35mkey[0m[1m([0ms[1m)[0m in state_dict: [32m"proj.weight"[0m, [32m"proj.bias"[0m, [32m"pe.pe"[0m, 
+[32m"enc.layers.0.self_attn.in_proj_weight"[0m, [32m"enc.layers.0.self_attn.in_proj_bias"[0m, 
+[32m"enc.layers.0.self_attn.out_proj.weight"[0m, 
+[32m"enc.layers.0.self_attn.out_proj.bias"[0m, [32m"enc.layers.0.linear1.weight"[0m, 
+[32m"enc.layers.0.linear1.bias"[0m, [32m"enc.layers.0.linear2.weight"[0m, 
+[32m"enc.layers.0.linear2.bias"[0m, [32m"enc.layers.0.norm1.weight"[0m, 
+[32m"enc.layers.0.norm1.bias"[0m, [32m"enc.layers.0.norm2.weight"[0m, 
+[32m"enc.layers.0.norm2.bias"[0m, [32m"enc.layers.1.self_attn.in_proj_weight"[0m, 
+[32m"enc.layers.1.self_attn.in_proj_bias"[0m, [32m"enc.layers.1.self_attn.out_proj.weight"[0m,
+[32m"enc.layers.1.self_attn.out_proj.bias"[0m, [32m"enc.layers.1.linear1.weight"[0m, 
+[32m"enc.layers.1.linear1.bias"[0m, [32m"enc.layers.1.linear2.weight"[0m, 
+[32m"enc.layers.1.linear2.bias"[0m, [32m"enc.layers.1.norm1.weight"[0m, 
+[32m"enc.layers.1.norm1.bias"[0m, [32m"enc.layers.1.norm2.weight"[0m, 
+[32m"enc.layers.1.norm2.bias"[0m, [32m"enc.layers.2.self_attn.in_proj_weight"[0m, 
+[32m"enc.layers.2.self_attn.in_proj_bias"[0m, [32m"enc.layers.2.self_attn.out_proj.weight"[0m,
+[32m"enc.layers.2.self_attn.out_proj.bias"[0m, [32m"enc.layers.2.linear1.weight"[0m, 
+[32m"enc.layers.2.linear1.bias"[0m, [32m"enc.layers.2.linear2.weight"[0m, 
+[32m"enc.layers.2.linear2.bias"[0m, [32m"enc.layers.2.norm1.weight"[0m, 
+[32m"enc.layers.2.norm1.bias"[0m, [32m"enc.layers.2.norm2.weight"[0m, 
+[32m"enc.layers.2.norm2.bias"[0m. 
+        Unexpected [1;35mkey[0m[1m([0ms[1m)[0m in state_dict: [32m"input_proj.weight"[0m, [32m"input_proj.bias"[0m,
+[32m"pos_encoding.pe"[0m, [32m"encoder.layers.0.self_attn.in_proj_weight"[0m, 
+[32m"encoder.layers.0.self_attn.in_proj_bias"[0m, 
+[32m"encoder.layers.0.self_attn.out_proj.weight"[0m, 
+[32m"encoder.layers.0.self_attn.out_proj.bias"[0m, [32m"encoder.layers.0.linear1.weight"[0m, 
+[32m"encoder.layers.0.linear1.bias"[0m, [32m"encoder.layers.0.linear2.weight"[0m, 
+[32m"encoder.layers.0.linear2.bias"[0m, [32m"encoder.layers.0.norm1.weight"[0m, 
+[32m"encoder.layers.0.norm1.bias"[0m, [32m"encoder.layers.0.norm2.weight"[0m, 
+[32m"encoder.layers.0.norm2.bias"[0m, [32m"encoder.layers.1.self_attn.in_proj_weight"[0m, 
+[32m"encoder.layers.1.self_attn.in_proj_bias"[0m, 
+[32m"encoder.layers.1.self_attn.out_proj.weight"[0m, 
+[32m"encoder.layers.1.self_attn.out_proj.bias"[0m, [32m"encoder.layers.1.linear1.weight"[0m, 
+[32m"encoder.layers.1.linear1.bias"[0m, [32m"encoder.layers.1.linear2.weight"[0m, 
+[32m"encoder.layers.1.linear2.bias"[0m, [32m"encoder.layers.1.norm1.weight"[0m, 
+[32m"encoder.layers.1.norm1.bias"[0m, [32m"encoder.layers.1.norm2.weight"[0m, 
+[32m"encoder.layers.1.norm2.bias"[0m, [32m"encoder.layers.2.self_attn.in_proj_weight"[0m, 
+[32m"encoder.layers.2.self_attn.in_proj_bias"[0m, 
+[32m"encoder.layers.2.self_attn.out_proj.weight"[0m, 
+[32m"encoder.layers.2.self_attn.out_proj.bias"[0m, [32m"encoder.layers.2.linear1.weight"[0m, 
+[32m"encoder.layers.2.linear1.bias"[0m, [32m"encoder.layers.2.linear2.weight"[0m, 
+[32m"encoder.layers.2.linear2.bias"[0m, [32m"encoder.layers.2.norm1.weight"[0m, 
+[32m"encoder.layers.2.norm1.bias"[0m, [32m"encoder.layers.2.norm2.weight"[0m, 
+[32m"encoder.layers.2.norm2.bias"[0m. 
+/Users/shruthirajgangapuri/deep_learning_stock_project/app.py:41: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder=nn.TransformerEncoder(enc_layer,layers); self.fc=nn.Linear(d,out)
+2026-04-27 15:56:51.184 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+[31m──[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m──[0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mexec_code.py[0m:129 in             [31m [0m
+[31m [0m exec_func_with_error_handling                                                [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mscript_runner.py[0m:689 in         [31m [0m
+[31m [0m code_to_exec                                                                 [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/[0m[1mapp.py[0m:93 in <module> [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m 90 [0m[2m│   │   [0mX_input = torch.tensor(scaled_data, dtype=torch.float32).unsqu [31m [0m
+[31m [0m   [2m 91 [0m[2m│   │   [0m                                                               [31m [0m
+[31m [0m   [2m 92 [0m[2m│   │   [0m[2m# Run inference[0m                                                [31m [0m
+[31m [0m [31m❱ [0m 93 [2m│   │   [0mlstm_model, trans_model, af_model = [1;4mload_models()[0m              [31m [0m
+[31m [0m   [2m 94 [0m[2m│   │   [0m[94mwith[0m torch.no_grad():                                          [31m [0m
+[31m [0m   [2m 95 [0m[2m│   │   │   [0mmu_lstm = lstm_model(X_input)[[94m0[0m].cpu().numpy()             [31m [0m
+[31m [0m   [2m 96 [0m[2m│   │   │   [0mmu_trans = trans_model(X_input)[[94m0[0m].cpu().numpy()           [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/caching/[0m[1mcache_utils.py[0m:281 in __call__       [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/caching/[0m[1mcache_utils.py[0m:326 in                [31m [0m
+[31m [0m _get_or_create_cached_value                                                  [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/caching/[0m[1mcache_utils.py[0m:385 in                [31m [0m
+[31m [0m _handle_cache_miss                                                           [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/[0m[1mapp.py[0m:27 in          [31m [0m
+[31m [0m load_models                                                                  [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m 24 [0m[94mdef[0m[90m [0m[92mload_models[0m():                                                     [31m [0m
+[31m [0m   [2m 25 [0m[2m│   [0m[2m# LSTM[0m                                                             [31m [0m
+[31m [0m   [2m 26 [0m[2m│   [0mlstm_model = LSTMModel(input_size=[94m4[0m).to(device)                    [31m [0m
+[31m [0m [31m❱ [0m 27 [2m│   [0m[94mif[0m os.path.exists(MODEL_PATH_LSTM): [1;4mlstm_model.load_state_dict(tor[0m [31m [0m
+[31m [0m   [2m 28 [0m[2m│   [0mlstm_model.eval()                                                  [31m [0m
+[31m [0m   [2m 29 [0m[2m│   [0m                                                                   [31m [0m
+[31m [0m   [2m 30 [0m[2m│   [0m[2m# Transformer[0m                                                      [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/torch/nn/modules/[0m[1mmodule.py[0m:2639 in load_state_dict             [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m2636 [0m[2m│   │   │   │   [0m)                                                     [31m [0m
+[31m [0m   [2m2637 [0m[2m│   │   [0m                                                              [31m [0m
+[31m [0m   [2m2638 [0m[2m│   │   [0m[94mif[0m [96mlen[0m(error_msgs) > [94m0[0m:                                       [31m [0m
+[31m [0m [31m❱ [0m2639 [2m│   │   │   [0m[1;4;94mraise[0m[1;4m [0m[1;4;96mRuntimeError[0m[1;4m([0m                                       [31m [0m
+[31m [0m   [2m2640 [0m[2m│   │   │   │   [0m[1;4;33m"[0m[1;4;33mError(s) in loading state_dict for [0m[1;4;33m{}[0m[1;4;33m:[0m[1;4;33m\n[0m[1;4;33m\t[0m[1;4;33m{}[0m[1;4;33m"[0m[1;4m.format[0m [31m [0m
+[31m [0m   [2m2641 [0m[2m│   │   │   │   │   [0m[1;4;96mself[0m[1;4m.[0m[1;4;91m__class__[0m[1;4m.[0m[1;4;91m__name__[0m[1;4m, [0m[1;4;33m"[0m[1;4;33m\n[0m[1;4;33m\t[0m[1;4;33m"[0m[1;4m.join(error_msgs)[0m  [31m [0m
+[31m [0m   [2m2642 [0m[2m│   │   │   │   [0m[1;4m)[0m                                                     [31m [0m
+[31m────────────────────────────────────────────────────────────────────────────────[0m
+[1;91mRuntimeError: [0m[1;35mError[0m[1m([0ms[1m)[0m in loading state_dict for LSTMForecastModel:
+        size mismatch for lstm.weight_ih_l0: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m, [1;36m4[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m, [1;36m4[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.weight_hh_l0: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m, [1;36m64[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m, [1;36m128[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.bias_ih_l0: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.bias_hh_l0: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.weight_ih_l1: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m, [1;36m64[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m, [1;36m128[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.weight_hh_l1: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m, [1;36m64[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m, [1;36m128[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.bias_ih_l1: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.bias_hh_l1: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m[1m][0m[1m)[0m.
+        size mismatch for fc.weight: copying a param with shape [1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m5[0m, 
+[1;36m64[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is [1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m5[0m, [1;36m128[0m[1m][0m[1m)[0m.
+[31m──[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m──[0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mexec_code.py[0m:129 in             [31m [0m
+[31m [0m exec_func_with_error_handling                                                [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mscript_runner.py[0m:689 in         [31m [0m
+[31m [0m code_to_exec                                                                 [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/[0m[1mapp.py[0m:93 in <module> [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m 90 [0m[2m│   │   [0mX_input = torch.tensor(scaled_data, dtype=torch.float32).unsqu [31m [0m
+[31m [0m   [2m 91 [0m[2m│   │   [0m                                                               [31m [0m
+[31m [0m   [2m 92 [0m[2m│   │   [0m[2m# Run inference[0m                                                [31m [0m
+[31m [0m [31m❱ [0m 93 [2m│   │   [0mlstm_model, trans_model, af_model = [1;4mload_models()[0m              [31m [0m
+[31m [0m   [2m 94 [0m[2m│   │   [0m[94mwith[0m torch.no_grad():                                          [31m [0m
+[31m [0m   [2m 95 [0m[2m│   │   │   [0mmu_lstm = lstm_model(X_input)[[94m0[0m].cpu().numpy()             [31m [0m
+[31m [0m   [2m 96 [0m[2m│   │   │   [0mmu_trans = trans_model(X_input)[[94m0[0m].cpu().numpy()           [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/caching/[0m[1mcache_utils.py[0m:281 in __call__       [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/caching/[0m[1mcache_utils.py[0m:326 in                [31m [0m
+[31m [0m _get_or_create_cached_value                                                  [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/caching/[0m[1mcache_utils.py[0m:385 in                [31m [0m
+[31m [0m _handle_cache_miss                                                           [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/[0m[1mapp.py[0m:27 in          [31m [0m
+[31m [0m load_models                                                                  [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m 24 [0m[94mdef[0m[90m [0m[92mload_models[0m():                                                     [31m [0m
+[31m [0m   [2m 25 [0m[2m│   [0m[2m# LSTM[0m                                                             [31m [0m
+[31m [0m   [2m 26 [0m[2m│   [0mlstm_model = LSTMModel(input_size=[94m4[0m).to(device)                    [31m [0m
+[31m [0m [31m❱ [0m 27 [2m│   [0m[94mif[0m os.path.exists(MODEL_PATH_LSTM): [1;4mlstm_model.load_state_dict(tor[0m [31m [0m
+[31m [0m   [2m 28 [0m[2m│   [0mlstm_model.eval()                                                  [31m [0m
+[31m [0m   [2m 29 [0m[2m│   [0m                                                                   [31m [0m
+[31m [0m   [2m 30 [0m[2m│   [0m[2m# Transformer[0m                                                      [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/torch/nn/modules/[0m[1mmodule.py[0m:2639 in load_state_dict             [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m2636 [0m[2m│   │   │   │   [0m)                                                     [31m [0m
+[31m [0m   [2m2637 [0m[2m│   │   [0m                                                              [31m [0m
+[31m [0m   [2m2638 [0m[2m│   │   [0m[94mif[0m [96mlen[0m(error_msgs) > [94m0[0m:                                       [31m [0m
+[31m [0m [31m❱ [0m2639 [2m│   │   │   [0m[1;4;94mraise[0m[1;4m [0m[1;4;96mRuntimeError[0m[1;4m([0m                                       [31m [0m
+[31m [0m   [2m2640 [0m[2m│   │   │   │   [0m[1;4;33m"[0m[1;4;33mError(s) in loading state_dict for [0m[1;4;33m{}[0m[1;4;33m:[0m[1;4;33m\n[0m[1;4;33m\t[0m[1;4;33m{}[0m[1;4;33m"[0m[1;4m.format[0m [31m [0m
+[31m [0m   [2m2641 [0m[2m│   │   │   │   │   [0m[1;4;96mself[0m[1;4m.[0m[1;4;91m__class__[0m[1;4m.[0m[1;4;91m__name__[0m[1;4m, [0m[1;4;33m"[0m[1;4;33m\n[0m[1;4;33m\t[0m[1;4;33m"[0m[1;4m.join(error_msgs)[0m  [31m [0m
+[31m [0m   [2m2642 [0m[2m│   │   │   │   [0m[1;4m)[0m                                                     [31m [0m
+[31m────────────────────────────────────────────────────────────────────────────────[0m
+[1;91mRuntimeError: [0m[1;35mError[0m[1m([0ms[1m)[0m in loading state_dict for LSTMForecastModel:
+        size mismatch for lstm.weight_ih_l0: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m, [1;36m4[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m, [1;36m4[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.weight_hh_l0: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m, [1;36m64[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m, [1;36m128[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.bias_ih_l0: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.bias_hh_l0: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.weight_ih_l1: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m, [1;36m64[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m, [1;36m128[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.weight_hh_l1: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m, [1;36m64[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m, [1;36m128[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.bias_ih_l1: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.bias_hh_l1: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m[1m][0m[1m)[0m.
+        size mismatch for fc.weight: copying a param with shape [1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m5[0m, 
+[1;36m64[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is [1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m5[0m, [1;36m128[0m[1m][0m[1m)[0m.
+[31m──[0m[31m────────────────────[0m[31m [0m[1;31mTraceback [0m[1;2;31m(most recent call last)[0m[31m [0m[31m─────────────────────[0m[31m──[0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mexec_code.py[0m:129 in             [31m [0m
+[31m [0m exec_func_with_error_handling                                                [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/scriptrunner/[0m[1mscript_runner.py[0m:689 in         [31m [0m
+[31m [0m code_to_exec                                                                 [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/[0m[1mapp.py[0m:93 in <module> [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m 90 [0m[2m│   │   [0mX_input = torch.tensor(scaled_data, dtype=torch.float32).unsqu [31m [0m
+[31m [0m   [2m 91 [0m[2m│   │   [0m                                                               [31m [0m
+[31m [0m   [2m 92 [0m[2m│   │   [0m[2m# Run inference[0m                                                [31m [0m
+[31m [0m [31m❱ [0m 93 [2m│   │   [0mlstm_model, trans_model, af_model = [1;4mload_models()[0m              [31m [0m
+[31m [0m   [2m 94 [0m[2m│   │   [0m[94mwith[0m torch.no_grad():                                          [31m [0m
+[31m [0m   [2m 95 [0m[2m│   │   │   [0mmu_lstm = lstm_model(X_input)[[94m0[0m].cpu().numpy()             [31m [0m
+[31m [0m   [2m 96 [0m[2m│   │   │   [0mmu_trans = trans_model(X_input)[[94m0[0m].cpu().numpy()           [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/caching/[0m[1mcache_utils.py[0m:281 in __call__       [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/caching/[0m[1mcache_utils.py[0m:326 in                [31m [0m
+[31m [0m _get_or_create_cached_value                                                  [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/streamlit/runtime/caching/[0m[1mcache_utils.py[0m:385 in                [31m [0m
+[31m [0m _handle_cache_miss                                                           [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/[0m[1mapp.py[0m:27 in          [31m [0m
+[31m [0m load_models                                                                  [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m 24 [0m[94mdef[0m[90m [0m[92mload_models[0m():                                                     [31m [0m
+[31m [0m   [2m 25 [0m[2m│   [0m[2m# LSTM[0m                                                             [31m [0m
+[31m [0m   [2m 26 [0m[2m│   [0mlstm_model = LSTMModel(input_size=[94m4[0m).to(device)                    [31m [0m
+[31m [0m [31m❱ [0m 27 [2m│   [0m[94mif[0m os.path.exists(MODEL_PATH_LSTM): [1;4mlstm_model.load_state_dict(tor[0m [31m [0m
+[31m [0m   [2m 28 [0m[2m│   [0mlstm_model.eval()                                                  [31m [0m
+[31m [0m   [2m 29 [0m[2m│   [0m                                                                   [31m [0m
+[31m [0m   [2m 30 [0m[2m│   [0m[2m# Transformer[0m                                                      [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m [2m/Users/shruthirajgangapuri/deep_learning_stock_project/.venv/lib/python3.13/[0m [31m [0m
+[31m [0m [2msite-packages/torch/nn/modules/[0m[1mmodule.py[0m:2639 in load_state_dict             [31m [0m
+[31m [0m                                                                              [31m [0m
+[31m [0m   [2m2636 [0m[2m│   │   │   │   [0m)                                                     [31m [0m
+[31m [0m   [2m2637 [0m[2m│   │   [0m                                                              [31m [0m
+[31m [0m   [2m2638 [0m[2m│   │   [0m[94mif[0m [96mlen[0m(error_msgs) > [94m0[0m:                                       [31m [0m
+[31m [0m [31m❱ [0m2639 [2m│   │   │   [0m[1;4;94mraise[0m[1;4m [0m[1;4;96mRuntimeError[0m[1;4m([0m                                       [31m [0m
+[31m [0m   [2m2640 [0m[2m│   │   │   │   [0m[1;4;33m"[0m[1;4;33mError(s) in loading state_dict for [0m[1;4;33m{}[0m[1;4;33m:[0m[1;4;33m\n[0m[1;4;33m\t[0m[1;4;33m{}[0m[1;4;33m"[0m[1;4m.format[0m [31m [0m
+[31m [0m   [2m2641 [0m[2m│   │   │   │   │   [0m[1;4;96mself[0m[1;4m.[0m[1;4;91m__class__[0m[1;4m.[0m[1;4;91m__name__[0m[1;4m, [0m[1;4;33m"[0m[1;4;33m\n[0m[1;4;33m\t[0m[1;4;33m"[0m[1;4m.join(error_msgs)[0m  [31m [0m
+[31m [0m   [2m2642 [0m[2m│   │   │   │   [0m[1;4m)[0m                                                     [31m [0m
+[31m────────────────────────────────────────────────────────────────────────────────[0m
+[1;91mRuntimeError: [0m[1;35mError[0m[1m([0ms[1m)[0m in loading state_dict for LSTMForecastModel:
+        size mismatch for lstm.weight_ih_l0: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m, [1;36m4[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m, [1;36m4[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.weight_hh_l0: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m, [1;36m64[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m, [1;36m128[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.bias_ih_l0: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.bias_hh_l0: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.weight_ih_l1: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m, [1;36m64[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m, [1;36m128[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.weight_hh_l1: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m, [1;36m64[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m, [1;36m128[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.bias_ih_l1: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m[1m][0m[1m)[0m.
+        size mismatch for lstm.bias_hh_l1: copying a param with shape 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m256[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is 
+[1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m512[0m[1m][0m[1m)[0m.
+        size mismatch for fc.weight: copying a param with shape [1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m5[0m, 
+[1;36m64[0m[1m][0m[1m)[0m from checkpoint, the shape in current model is [1;35mtorch.Size[0m[1m([0m[1m[[0m[1;36m5[0m, [1;36m128[0m[1m][0m[1m)[0m.
+  Stopping...
