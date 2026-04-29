@@ -4,22 +4,19 @@ A deep learning project for predicting stock prices using various neural network
 
 ## Project Structure
 
-```
-.
-├── app.py                      # Main application entry point
-├── requirements.txt            # Python dependencies
-├── data/                       # Stock price data files (.txt format)
-├── models/                     # Trained model weights and checkpoints
-├── notebooks/                  # Jupyter notebooks and analysis scripts
-│   ├── 03_autoformer_uq.ipynb # AutoFormer model with uncertainty quantification
-│   └── make_notebooks.py       # Notebook generation utility
-├── src/                        # Source code modules
-│   ├── __init__.py
-│   ├── lstm_model.py          # LSTM-based prediction model
-│   ├── transformer_model.py   # Transformer-based prediction model
-│   └── autoformer_model.py    # AutoFormer-based prediction model
-└── outputs/                    # Model outputs and predictions
-```
+- app.py - Main application entry point
+- requirements.txt - Python dependencies
+- data/ - Stock price data files (.txt format)
+- models/ - Trained model weights and checkpoints
+- notebooks/ - Jupyter notebooks and analysis scripts
+  - 03_autoformer_uq.ipynb - AutoFormer model with uncertainty quantification
+  - make_notebooks.py - Notebook generation utility
+- src/ - Source code modules
+  - __init__.py
+  - lstm_model.py - LSTM-based prediction model
+  - transformer_model.py - Transformer-based prediction model
+  - autoformer_model.py - AutoFormer-based prediction model
+- outputs/ - Model outputs and predictions
 
 ## Models
 
